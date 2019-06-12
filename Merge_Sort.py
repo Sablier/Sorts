@@ -19,6 +19,7 @@ def merge_sort(list):
             sub_2[0], sub_2[1] = sub_2[1], sub_2[0]
 
     # 开始合并
+    # 每次抽出两组的第一个数，将较小的那一个放入新的队列中
     new_list = []
     for i in range(len(sub_2) + len(sub_2)):
         if sub_1 == []:
