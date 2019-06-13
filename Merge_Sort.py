@@ -1,11 +1,12 @@
 def merge_sort(list):
+
     # 确定中间数，进行分组
     mid_pos = len(list) // 2
 
     sub_1 = list[:mid_pos]
     sub_2 = list[mid_pos:]
 
-    # 进入分组迭代
+    # 进入分组递归
     if len(sub_1) > 2:
         sub_1 = merge_sort(sub_1)
     elif len(sub_1) == 2:

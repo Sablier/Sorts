@@ -16,8 +16,8 @@ def merge_sort(list):
         sub_1 = list[:mid_pos]
         sub_2 = list[mid_pos:]
 
-        # 进入分组迭代
-        # 由于排序和跳出都是在分组前进行的，所以迭代不需要再判断条件了。
+        # 进入分组递归
+        # 由于排序和跳出都是在分组前进行的，所以递归不需要再判断条件了。
         sub_1 = merge_sort(sub_1)
         sub_2 = merge_sort(sub_2)
 
