@@ -1,5 +1,4 @@
-def quick_sort(tlist,start,end):
-
+def quick_sort(tlist, start, end):
     # 0. 规定递归的跳出条件
     if start >= end:
         return
@@ -15,13 +14,13 @@ def quick_sort(tlist,start,end):
         while leftPointer < rightPointer and tlist[rightPointer] >= pivot:
             rightPointer -= 1
         # 如果指针元素比基准小，则将指针元素移动到左侧指针的位置（第一次则移动到基准元素的位置上）
-        tlist[leftPointer]=tlist[rightPointer]
+        tlist[leftPointer] = tlist[rightPointer]
 
         # 然后左侧指针从左往右移动，若指针位置的值比基准pivot小则继续向右移动
         while leftPointer < rightPointer and tlist[leftPointer] < pivot:
             leftPointer += 1
         # 如果指针元素比基准大，则将指针元素移动到左侧指针的位置
-        tlist[rightPointer]=tlist[leftPointer]
+        tlist[rightPointer] = tlist[leftPointer]
 
         # 如果左侧指针位置依然比右侧小则进入下一个循环
 
@@ -33,12 +32,13 @@ def quick_sort(tlist,start,end):
     # 而第一次被右边指针覆盖的元素是列表的基准值pivot，它已经被提前保存了。所以经过一系列移动，元素并不会减少，也不存在漏判断的问题。
 
     # 3. 递归排序
-    quick_sort(tlist,0,rightPointer-1)
-    quick_sort(tlist,rightPointer+1,end)
+    quick_sort(tlist, 0, rightPointer - 1)
+    quick_sort(tlist, rightPointer + 1, end)
 
     return tlist
 
 
 if __name__ == '__main__':
-    tlist = [7850, 76892, 49169, 44721, 51861, 66149, 18273, 94882, 63497, 8427, 65300, 20822, 15745, 12270, 31608, 38276, 36210, 21632, 33084, 61789]
-    print(quick_sort(tlist,0,len(tlist)-1))
+    tlist = [7850, 76892, 49169, 44721, 51861, 66149, 18273, 94882, 63497, 8427, 65300, 20822, 15745, 12270, 31608,
+             38276, 36210, 21632, 33084, 61789]
+    print(quick_sort(tlist, 0, len(tlist) - 1))
