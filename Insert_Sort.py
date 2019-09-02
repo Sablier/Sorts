@@ -2,11 +2,11 @@ def insert(tlist):
     pivot = 1
 
     while pivot < len(tlist):
-        n = pivot     # 如果基准元素与有序列表元素比对交换了位置，那么基准元素的下标也要跟着改变。所以需要一个临时变量暂时储存
+        n = pivot  # 如果基准元素与有序列表元素比对交换了位置，那么基准元素的下标也要跟着改变。所以需要一个临时变量暂时储存
         for i in range(pivot, 0, -1):
             if tlist[n] < tlist[i - 1]:
                 tlist[n], tlist[i - 1] = tlist[i - 1], tlist[n]
-                n = i - 1 # 交换值同时也要改变临时基准的下标（这里直接减少基准也可以，但这样会从新的基准位置开始便利，重复排序）
+                n = i - 1  # 交换值同时也要改变临时基准的下标（这里直接减少基准也可以，但这样会从新的基准位置开始便利，重复排序）
         pivot += 1
 
     return tlist

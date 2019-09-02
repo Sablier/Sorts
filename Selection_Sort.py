@@ -19,17 +19,16 @@ def selection_sort(tlist):
 
 
 def select_sort(li):
-
     n = len(li)
 
     # 选择的次数，n-1次，每一次选择一个最小的数，依次放到0~ n-1 位置
-    for j in range(n-1):
+    for j in range(n - 1):
 
         # 选择一次，把最小的数放到0位置
         # 认为0位置的数据最小，记录0位置
         min_index = j
         # 那最小的数，跟后面所有的数据进行比较
-        for i in range(1+j, n):
+        for i in range(1 + j, n):
             # 拿最小的数跟当前位置的数比较，让min_index 记录最小的数的位置
             if li[i] < li[min_index]:
                 min_index = i
