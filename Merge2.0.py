@@ -1,5 +1,4 @@
 def merge_sort(list):
-
     if len(list) < 2:
         # 如果只有一个元素，无需排序直接返回
         return list
@@ -24,7 +23,7 @@ def merge_sort(list):
         # 开始合并
         # 每次抽出两组的第一个数，将较小的那一个放入新的队列中
         new_list = []
-        for i in range(len(sub_2) + len(sub_2)):
+        for i in range(len(sub_1) + len(sub_2)):
             if sub_1 == []:
                 new_list += sub_2
                 break
