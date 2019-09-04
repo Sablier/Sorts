@@ -1,5 +1,4 @@
 def binary(tlist, item):
-
     if len(tlist) == 0:
         return None
 
@@ -14,10 +13,10 @@ def binary(tlist, item):
     else:
         return binary(tlist[:mid_index], item)
 
-def binary_search(tlist,item):
 
+def binary_search(tlist, item):
     left = 0
-    right = len(tlist)-1
+    right = len(tlist) - 1
 
     while left <= right:
 
@@ -27,10 +26,10 @@ def binary_search(tlist,item):
             return mid_index
 
         elif item < tlist[mid_index]:
-            right = mid_index-1
+            right = mid_index - 1
 
         else:
-            left = mid_index+1
+            left = mid_index + 1
 
 
 if __name__ == '__main__':
@@ -38,5 +37,3 @@ if __name__ == '__main__':
     target = 11
     print(binary(tlist, target))
     print(binary_search(tlist, target))
-
-
