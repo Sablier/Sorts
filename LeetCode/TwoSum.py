@@ -15,14 +15,26 @@ def func(numbers, target):
     for i in range(len(numbers)):
         for j in range(len(numbers)):
             if numbers[i] + numbers[j] == int(target):
-                if i > j:
-                    return j + 1, i + 1
-                else:
+                if j > i:
                     return i + 1, j + 1
+                # else:
+                #     return j + 1, i + 1
+
+
+class Solution(object):
+    def twoSum(self, numbers, target):
+
+        for index1, value1 in enumerate(numbers):
+            for index2, value2 in enumerate(numbers):
+                if index2 > index1 and value1 + value2 == target:
+                    return index1 + 1, index2 + 1
 
 
 if __name__ == '__main__':
     numbers = [2, 7, 11, 15]
     target = 9
     res = func(numbers, target)
+    print(res)
+    so = Solution()
+    res = so.twoSum(numbers, target)
     print(res)
