@@ -4,9 +4,9 @@ class Queue(object):
     def __init__(self):
         self.data = []
 
-    def enqueue(self,item):
+    def enqueue(self, content):
         """添加一个元素"""
-        self.data.insert(0,item)
+        self.data.insert(0, content)
 
     def dequeue(self):
         """取出一个元素"""

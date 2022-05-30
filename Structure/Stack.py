@@ -4,9 +4,9 @@ class Stack(object):
     def __init__(self):
         self.data = []
 
-    def push(self,item):
+    def push(self,content):
         """添加一个元素（到栈顶）"""
-        self.data.append(item)
+        self.data.append(content)
 
     def pop(self):
         """弹出栈顶的元素"""

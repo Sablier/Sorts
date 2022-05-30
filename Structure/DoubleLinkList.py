@@ -19,7 +19,7 @@ class DoubleLinkList(object):
         # 判断首节点
         return self.__head is None
 
-    def travel(self):
+    def scan(self):
         """遍历链表"""
         # 创建游标
         cur = self.__head
@@ -149,13 +149,13 @@ if __name__ == '__main__':
     print(sll.is_empty())
     sll.add(5)
     sll.add(4)
-    sll.travel()
+    sll.scan()
     print(sll.length())
     sll.append(7)
-    sll.travel()
+    sll.scan()
     sll.insert_v2(3, 8)
-    sll.travel()
+    sll.scan()
     sll.remove(8)
-    sll.travel()
+    sll.scan()
     print(sll.search(6))
     print(sll.search(8))

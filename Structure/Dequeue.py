@@ -4,13 +4,13 @@ class Dequeue(object):
     def __init__(self):
         self.data = []
 
-    def add_front(self,item):
+    def add_front(self, content):
         """添加一个元素到头部"""
-        self.data.insert(0,item)
+        self.data.insert(0, content)
 
-    def add_rear(self,item):
+    def add_rear(self, content):
         """添加一个元素到队尾"""
-        self.data.append(item)
+        self.data.append(content)
 
     def remove_front(self):
         """从队首取出元素"""

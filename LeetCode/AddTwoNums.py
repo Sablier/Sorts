@@ -14,8 +14,8 @@
 class Node(object):
     """节点类"""
 
-    def __init__(self, item):
-        self.item = item
+    def __init__(self, content):
+        self.content = content
         self.next = None
 
 
@@ -28,28 +28,28 @@ class SingleLinkList(object):
     def is_empty(self):
         return self.head is None
 
-    def travel(self):
+    def scan(self):
         """遍历链表"""
         cur = self.head
         while cur is not None:
-            print(cur.item, end=" ")
+            print(cur.content, end=" ")
             cur = cur.next
 
-    def add(self, item):
+    def add(self, content):
         """向链表头部添加数据"""
-        node = Node(item)
+        node = Node(content)
         node.next = self.head
         self.head = node
 
-    def append(self, item):
+    def append(self, content):
         """向链表尾部添加"""
         if self.is_empty():
-            self.add(item)
+            self.add(content)
             return
         cur = self.head
         while cur.next is not None:
             cur = cur.next
-        node = Node(item)
+        node = Node(content)
         cur.next = node
 
 
@@ -57,13 +57,13 @@ def add_links(a, b):
     a_list = []
     a_node = a.head
     while a_node is not None:
-        a_list.append(a_node.item)
+        a_list.append(a_node.content)
         a_node = a_node.next
 
     b_list = []
     b_node = b.head
     while b_node is not None:
-        b_list.append(b_node.item)
+        b_list.append(b_node.content)
         b_node = b_node.next
 
     longer = 'a' if len(a_list) > len(b_list) else 'b'
@@ -108,4 +108,4 @@ if __name__ == '__main__':
     b.append(5)
 
     res = add_links(a, b)
-    res.travel()
+    res.scan()
